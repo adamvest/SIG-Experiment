@@ -39,8 +39,8 @@ def pca(data, args):
 
         return np.array([y[:, idxs[i]] for i in range(next_idx_to_select)]).T
     else:
-        y = np.dot(data, eigh_vectors.T)
-
+        y = np.dot(data, eigh_vectors)
+        
         return np.array([y[:, idxs[i]] for i in range(args.num_features)]).T
 
 
